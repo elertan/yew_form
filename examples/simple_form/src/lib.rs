@@ -1,6 +1,9 @@
 use yew::prelude::*;
 use yew_form::YewForm;
 
+#[derive(Default)]
+pub struct Values {}
+
 pub struct App {}
 
 impl Component for App {
@@ -16,8 +19,10 @@ impl Component for App {
     }
 
     fn view(&self) -> Html<Self> {
+        let values = Values {};
+
         html! {
-            <YewForm />
+            <YewForm<Values> initial_values=values />
         }
     }
 }
