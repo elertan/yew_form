@@ -1,8 +1,9 @@
 use yew::prelude::*;
+use yew_form::YewForm;
 
-pub struct YewForm {}
+pub struct App {}
 
-impl Component for YewForm {
+impl Component for App {
     type Message = ();
     type Properties = ();
 
@@ -16,7 +17,7 @@ impl Component for YewForm {
 
     fn view(&self) -> Html<Self> {
         html! {
-            <div>{"Hello, world!"}</div>
+            <YewForm />
         }
     }
 }
